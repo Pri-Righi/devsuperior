@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity //configura a classe para que ela seja equivalente a uma tabela do banco de dados
-@Table(name = "tb_name")
+@Table(name = "tb_game")
 public class Game {
 
     @Id //chave primaria
@@ -19,7 +19,10 @@ public class Game {
     private String platforms;
     private String score;
     private String imgUrl;
+
+    @Column(columnDefinition = "Text")
     private String shortDescription;
+    @Column(columnDefinition = "Text")
     private String longDescription;
 
     public Game() {
