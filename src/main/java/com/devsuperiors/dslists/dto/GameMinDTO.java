@@ -4,7 +4,7 @@ import com.devsuperiors.dslists.entities.Game;
 import jakarta.persistence.Column;
 
 public class GameMinDTO {
-    //dados que serão expostos na API
+    //apenas dados que quero expor na API
 
     private Long id;
     private String title;
