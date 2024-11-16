@@ -21,7 +21,9 @@ public class GameDTO { //
 
     //construtor recebendo uma entidade
     public GameDTO(Game entity) {
-        BeanUtils.copyProperties(entity, this); //copiando todos os atributos da entidade para o DTO (this)
+        BeanUtils.copyProperties(entity, this);
+        //copiando todos os atributos da entidade para o DTO (this)
+        //utilizando o beanutils precisa implemetar getters e setters, senao seria apenas os getters
     }
 
     public Long getId() {

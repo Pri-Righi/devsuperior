@@ -7,6 +7,7 @@ import com.devsuperiors.dslists.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -18,8 +19,8 @@ public class GameService {
     private GameRepository gameRepository; //injetando uma instancia do gamerepository no service
 
     @Transactional(readOnly = true)
-    public GameDTO findById(Long id) {
-        Game result = gameRepository.findById(id).get();
+    public GameDTO findById(@PathVariable Long listId) {
+        Game result = gameRepository.findById(listId).get();
         GameDTO dto = new GameDTO(result);
         return dto;
     }
