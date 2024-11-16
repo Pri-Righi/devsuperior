@@ -25,10 +25,12 @@ public class Game {
     @Column(columnDefinition = "Text")
     private String longDescription;
 
+    //construtor padrao
     public Game() {
 
     }
 
+    //construtor com parametros
     public Game(Long id, String title, Integer year, String genre, String platforms, String score, String imgUrl,
                 String shortDescription, String longDescription) {
         this.id = id;
@@ -42,54 +44,43 @@ public class Game {
         this.longDescription = longDescription;
     }
 
+    //getters setters
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
-
     public Integer getYear() {
         return year;
     }
-
     public void setYear(Integer year) {
         this.year = year;
     }
-
     public String getGenre() {
         return genre;
     }
-
     public void setGenre(String genre) {
         this.genre = genre;
     }
-
     public String getPlatforms() {
         return platforms;
     }
-
     public void setPlatforms(String platforms) {
         this.platforms = platforms;
     }
-
     public String getScore() {
         return score;
     }
-
     public void setScore(String score) {
         this.score = score;
     }
-
     public String getImgUrl() {
         return imgUrl;
     }
